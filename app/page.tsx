@@ -1,29 +1,21 @@
-"use client";
+import About from '@/components/about/About';
+import Articles from '@/components/articles/Articles';
+import Contact from '@/components/contact/Contact';
+import Hero from '@/components/hero/Hero';
+import ProjectsSection from '@/components/projects/ProjectsSection';
+import Reviews from '@/components/review/Reviews';
+import Techs from '@/components/techs/Techs';
 
-import Hero from "@/components/Hero";
-import Grid from "@/components/Grid";
-import RecentProjects from "@/components/RecentProjects";
-import Approach from "@/components/Approach";
-import Footer from "@/components/Footer";
-import Techs from "@/components/Techs";
-import NavBar from "@/components/NavBar";
-
-const Home = () => {
+export default function Home() {
   return (
-    <main className="relative bg-black-100 flex 
-    justify-center items-center flex-col  
-    mx-auto sm:px-10 px-5 overflow-clip">
-      <div className="max-w-7xl w-full">
-        <NavBar />
-        <Hero />
-        <Grid />
-        <RecentProjects />
-        <Techs />
-        <Approach />
-        <Footer />
-      </div>
-    </main>
+    <>
+      <Hero />
+      <About />
+      <Techs />
+      <ProjectsSection />
+      <Articles />
+      <Reviews />
+      <Contact />
+    </>
   );
-};
-
-export default Home;
+}
